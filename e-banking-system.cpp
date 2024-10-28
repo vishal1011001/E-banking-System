@@ -21,19 +21,6 @@ string generateOTP(){
     return otp;
 }
 
-// string verifyOTP(string otp){
-//     string correct = "yes";
-//     string wrong = "no";
-    
-//     string oneTimePass;
-//     cout << "enter OTP: ";
-//     getline(cin, oneTimePass);
-//     if(oneTimePass == otp){
-//         return correct;
-//     }
-//     else return wrong;
-// }
-
 double deposit(double balance){
     double added = 0;
     cout << "enter the amount to be deposited: $";
