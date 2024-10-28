@@ -38,12 +38,19 @@ double withdraw(double balance, string otp){
     cin >> deducted;
     cout << "enter otp: ";
     cin >> oneTimePass;
-    if(oneTimePass == otp){
-        cout << "amount withdrawn." << endl;
-        return balance-deducted;
+    
+    if(balance >= deducted){
+        if(oneTimePass == otp){
+            cout << "amount withdrawn." << endl;
+            return balance-deducted;
+        }
+        else cout << "wrong otp. Transaction failed." << endl;
+        return balance;
     }
-    else cout << "wrong otp. Transaction failed." << endl;
-    return balance;
+    else {
+        cout << "not enough balance." << endl;
+        return balance;
+    }
 }
 
 void checkBalance(double balance){
